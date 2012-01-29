@@ -6,10 +6,10 @@
 # warranties, including, without limitation, the implied warranties
 # of merchant-ability and fitness for a particular purpose.
 
-CC=gcc
+# CC=gcc
 #CFLAGS=-ggdb -Wall -DLINUX_BIGFILE
-CFLAGS=-O2 -Wall -fomit-frame-pointer -DLINUX_BIGFILE
-LDFLAGS=-s
+# CFLAGS=-O2 -Wall -fomit-frame-pointer -DLINUX_BIGFILE
+# LDFLAGS=-s
 
 # Uncomment for FreeBSD:
 #CC=gcc
@@ -17,9 +17,9 @@ LDFLAGS=-s
 #LDFLAGS=-s
 
 # Uncomment for OS X:
-#CC=cc
-#CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
-#LDFLAGS=
+CC=cc
+CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp -D_DARWIN_FEATURE_64_BIT_INODE
+LDFLAGS=
 
 # Uncomment for HP/UX:
 #CC=cc

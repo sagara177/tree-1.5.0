@@ -19,6 +19,7 @@
 
 #ifdef LINUX_BIGFILE
 #  define _LARGEFILE64_SOURCE
+#elif _DARWIN_FEATURE_64_BIT_INODE
 #else
 #  define stat64 stat
 #  define lstat64 lstat
@@ -189,7 +190,9 @@ char *sLevel, *curdir, *outfilename = NULL;
 FILE *outfile;
 int *dirs, maxdirs;
 
+#ifndef MB_CUR_MAX
 extern size_t MB_CUR_MAX;
+#endif
 
 int main(int argc, char **argv)
 {
